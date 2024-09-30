@@ -3,41 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Portfolio - Saurabh Verma</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="container">
+        <!-- Left Side Navigation -->
+        <aside class="sidebar">
+            <h1 class="logo">SV</h1>
+            <nav>
+                <ul>
+                    <li><a href="./">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Experiences</a></li>
+                    <li><a href="#">Project</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Contact details directly above footer -->
+            <div class="contact-details">
+                <p>Mobile: +91-XXXXXXXXXX</p>
+                <p>Email: <a href="mailto:saur95abh95@gmail.com">saur95abh95gmail.com</a></p> <!-- Make email clickable -->
+                <p>Feel free to reach out to me anytime for collaboration or inquiries.</p>
+            </div>
+            
+            <footer>
+                <p>&copy; 2024 Saurabh <br> Created by SV</p>
+            </footer>
+        </aside>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Introduce yourself here.</p>
-    </section>
-
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>Details about your project.</p>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: you@example.com</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Your Name</p>
-    </footer>
+        <!-- Right Side Profile -->
+        <section class="profile">
+            <div class="profile-picture">
+                <img src="https://via.placeholder.com/150" alt="Profile Picture">
+            </div>
+            <h2>SAURABH VERMA</h2>
+            <p>I am a student at Ramaiah Institute of Technology pursuing my B.E degree in Artificial Intelligence and Machine Learning in 3rd year.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a> <!-- Added GitHub icon -->
+            </div>
+        </section>
+    </div>
 </body>
 </html>
+
