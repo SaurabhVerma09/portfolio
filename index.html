@@ -14,18 +14,18 @@
             <h1 class="logo">SV</h1>
             <nav>
                 <ul>
-                    <li><a href="./">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Experiences</a></li>
-                    <li><a href="#">Project</a></li>
-                    <li><a href="#">Education</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" onclick="showSection('home')">Home</a></li>
+                    <li><a href="#" onclick="showSection('about')">About</a></li>
+                    <li><a href="#" onclick="showSection('experience')">Experiences</a></li>
+                    <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+                    <li><a href="#" onclick="showSection('education')">Education</a></li>
+                    <li><a href="#" onclick="showSection('contact')">Contact</a></li>
                 </ul>
             </nav>
             <!-- Contact details directly above footer -->
             <div class="contact-details">
                 <p>Mobile: +91-XXXXXXXXXX</p>
-                <p>Email: <a href="mailto:saur95abh95@gmail.com">saur95abh95gmail.com</a></p> <!-- Make email clickable -->
+                <p>Email: <a href="mailto:saur95abh95@gmail.com">saur95abh95gmail.com</a></p>
                 <p>Feel free to reach out to me anytime for collaboration or inquiries.</p>
             </div>
             
@@ -36,17 +36,76 @@
 
         <!-- Right Side Profile -->
         <section class="profile">
-            <div class="profile-picture">
-                <img src="https://via.placeholder.com/150" alt="Profile Picture">
+            <!-- Home Section -->
+            <div id="home" class="section">
+                <div class="profile-picture">
+                    <img src="https://via.placeholder.com/150" alt="Profile Picture">
+                </div>
+                <h2>SAURABH VERMA</h2>
+                <p>I am a student at Ramaiah Institute of Technology pursuing my B.E degree in Artificial Intelligence and Machine Learning in 3rd year.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
             </div>
-            <h2>SAURABH VERMA</h2>
-            <p>I am a student at Ramaiah Institute of Technology pursuing my B.E degree in Artificial Intelligence and Machine Learning in 3rd year.</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a> <!-- Added GitHub icon -->
+
+            <!-- About Section -->
+            <div id="about" class="section hidden">
+                <h2>About Me</h2>
+                <p>I am passionate about technology and AI. I have experience in software development and data structures, and I am always looking for new challenges and opportunities to grow.</p>
+            </div>
+
+            <!-- Experience Section -->
+            <div id="experience" class="section hidden">
+                <h2>Experience</h2>
+                <ul>
+                    <li>Intern at ABC Corp - Worked on AI models for predictive analytics</li>
+                    <li>Freelancer - Developed e-commerce platforms using Flutter and Python</li>
+                </ul>
+            </div>
+
+            <!-- Projects Section -->
+            <div id="projects" class="section hidden">
+                <h2>Projects</h2>
+                <ul>
+                    <li>AI-powered Smart Route Planner</li>
+                    <li>Online Voting System</li>
+                    <li>Virtual Fitting Room Technology</li>
+                </ul>
+            </div>
+
+            <!-- Education Section -->
+            <div id="education" class="section hidden">
+                <h2>Education</h2>
+                <p>B.E. in Artificial Intelligence and Machine Learning - Ramaiah Institute of Technology</p>
+            </div>
+
+            <!-- Contact Section -->
+            <div id="contact" class="section hidden">
+                <h2>Contact Me</h2>
+                <p>You can reach me via:</p>
+                <p>Email: <a href="mailto:saur95abh95@gmail.com">saur95abh95@gmail.com</a></p>
+                <p>Mobile: +91-XXXXXXXXXX</p>
             </div>
         </section>
     </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.add('hidden'));
+
+            // Show the selected section
+            const activeSection = document.getElementById(sectionId);
+            if (activeSection) {
+                activeSection.classList.remove('hidden');
+            }
+        }
+
+        // Show the home section by default
+        showSection('home');
+    </script>
 </body>
 </html>
 
