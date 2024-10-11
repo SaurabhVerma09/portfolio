@@ -1,43 +1,116 @@
-body {
-    font-family: Arial, sans-serif;
+/* General styles */
+body, html {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
 }
 
-header {
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar (left side) */
+.sidebar {
     background-color: #333;
     color: white;
-    padding: 1em;
-    text-align: center;
+    width: 25%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 1em;
+    margin-bottom: 20px;
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
+    color: white;
+    font-size: 18px;
 }
 
-section {
-    padding: 2em;
-    margin: 1em 0;
+nav ul li a:hover {
+    color: #007BFF;
 }
 
 footer {
+    font-size: 14px;
     text-align: center;
-    background-color: #333;
-    color: white;
-    padding: 1em;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+}
+
+/* Profile section (right side) */
+.profile {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #efefef;
+    text-align: center;
+}
+
+/* Hidden class for sections */
+.hidden {
+    display: none;
+}
+
+.profile-picture img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.profile h2 {
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+.profile p {
+    font-size: 16px;
+    color: #555;
+    margin: 20px 0;
+    max-width: 400px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.social-links a:hover {
+    color: #007BFF;
+}
+
+/* Styling for Contact Details */
+.contact-details {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.contact-details a {
+    color: #bec1c3;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    color: #007BFF;
+    text-decoration: underline;
 }
